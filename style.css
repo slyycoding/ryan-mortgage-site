@@ -845,6 +845,42 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* ════════════════════════════════════════════════════════════
+   SERVICES CAROUSEL
+   ════════════════════════════════════════════════════════════ */
+.services-carousel-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  margin-top: 0.5rem;
+}
+.services-track {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+  animation: services-scroll 28s linear infinite;
+}
+.services-track:hover { animation-play-state: paused; }
+@keyframes services-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.services-track .service-card {
+  width: 290px;
+  flex-shrink: 0;
+}
+
+/* ── Profile services heading ── */
+.profile-services-heading {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 0.25rem;
+}
+
+/* ════════════════════════════════════════════════════════════
    PROFILE IMAGE
    ════════════════════════════════════════════════════════════ */
 .profile-img-real {
