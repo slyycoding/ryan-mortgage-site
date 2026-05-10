@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave a Review | Ryan Chidgey · Yellow Brick Road</title>
+  <meta name="description" content="Share your experience working with Ryan Chidgey, mortgage consultant at Yellow Brick Road." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <nav class="nav-inner container-wide">
+      <a href="/" class="brand">
+        <span class="brand-name">Ryan Chidgey</span>
+        <span class="brand-sub">Yellow Brick Road</span>
+      </a>
+      <div class="desktop-nav">
+        <a href="/#services"    class="nav-link">Services</a>
+        <a href="/#profile"     class="nav-link">Profile</a>
+        <a href="/#calculator"  class="nav-link">Calculator</a>
+        <a href="/#lenders"     class="nav-link">Lenders</a>
+        <a href="/#reviews"     class="nav-link">Reviews</a>
+      </div>
+      <div class="nav-end">
+        <a href="tel:0435911715" class="btn-cta">0435 911 715</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/#services">Services</a>
+      <a href="/#profile">Profile</a>
+      <a href="/#calculator">Calculator</a>
+      <a href="/#lenders">Lenders</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/" class="mobile-cta">Back to Site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-surface" style="padding-top:8rem;">
+      <div class="container-wide">
+
+        <div class="section-head center-head">
+          <a href="/" class="back-link">← Back to site</a>
+          <span class="label-chip">Client Feedback</span>
+          <h1 class="headline-lg">Share Your Experience</h1>
+          <p class="body-lg text-muted">Worked with Ryan? Your review helps other Australians find trusted mortgage advice.</p>
+        </div>
+
+        <div class="form-shell" id="reviewFormWrap">
+          <form id="reviewForm" action="https://formspree.io/f/xojyprbk" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="⭐ New Review Submitted — ryanmortgage.com.au" />
+
+            <div class="form-section">
+              <h3 class="form-section-title">Your Review</h3>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label class="label-mono" for="reviewName">Your Name <span class="req">*</span></label>
+                  <input type="text" id="reviewName" name="name" required placeholder="e.g. Kate S." />
+                </div>
+                <div class="field">
+                  <label class="label-mono" for="reviewSuburb">Your Suburb <span class="text-muted">(optional)</span></label>
+                  <input type="text" id="reviewSuburb" name="suburb" placeholder="e.g. Cairns" />
+                </div>
+              </div>
+
+              <div class="form-grid" style="margin-top:1.25rem;">
+                <div class="field">
+                  <label class="label-mono" for="loanType">Loan Type <span class="text-muted">(optional)</span></label>
+                  <select id="loanType" name="loan_type">
+                    <option value="" disabled selected>Select…</option>
+                    <option value="First Home Buyer">First Home Buyer</option>
+                    <option value="Investor">Investor</option>
+                    <option value="Refinance">Refinance</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="label-mono">Star Rating <span class="req">*</span></label>
+                  <div class="star-rating">
+                    <input type="radio" name="rating" id="s5" value="5 stars" required />
+                    <label for="s5" title="5 stars">★</label>
+                    <input type="radio" name="rating" id="s4" value="4 stars" />
+                    <label for="s4" title="4 stars">★</label>
+                    <input type="radio" name="rating" id="s3" value="3 stars" />
+                    <label for="s3" title="3 stars">★</label>
+                    <input type="radio" name="rating" id="s2" value="2 stars" />
+                    <label for="s2" title="2 stars">★</label>
+                    <input type="radio" name="rating" id="s1" value="1 star" />
+                    <label for="s1" title="1 star">★</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field" style="margin-top:1.25rem;">
+                <label class="label-mono" for="reviewText">Your Review <span class="req">*</span></label>
+                <textarea id="reviewText" name="review" required minlength="20" placeholder="Tell others about your experience working with Ryan…" style="min-height:140px;"></textarea>
+                <p class="label-mono text-muted" id="charCount" style="margin-top:0.4rem;">Minimum 20 characters</p>
+              </div>
+            </div>
+
+            <div class="form-submit-area">
+              <p class="body-md text-muted form-submit-note">Your review will be sent to Ryan directly. Thank you for taking the time.</p>
+              <button type="submit" class="btn-primary btn-submit">Submit Review</button>
+              <p id="reviewStatus" class="form-status" role="status"></p>
+            </div>
+
+          </form>
+
+          <div class="review-success" id="reviewSuccess">
+            <div class="review-success-icon">★</div>
+            <h2 class="headline-lg">Thank you!</h2>
+            <p class="body-lg text-muted">Your review has been submitted. Ryan really appreciates you taking the time.</p>
+            <a href="/" class="btn-primary" style="margin-top:1rem;">Back to Site</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container-wide footer-bottom-inner">
+        <p class="label-mono text-muted">RYAN CHIDGEY IS A CREDIT REPRESENTATIVE OF YELLOW BRICK ROAD FINANCE. ACL 393195. ALL LOANS SUBJECT TO LENDER APPROVAL.</p>
+        <p class="label-mono text-muted">© 2026 RYAN CHIDGEY | DESIGNED BY SLY SYSTEMS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    /* Review form */
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewStatus = document.getElementById('reviewStatus');
+    const reviewSuccess = document.getElementById('reviewSuccess');
+
+    /* Live char count */
+    const textarea = document.getElementById('reviewText');
+    const charCount = document.getElementById('charCount');
+    textarea.addEventListener('input', () => {
+      const len = textarea.value.length;
+      charCount.textContent = len < 20 ? `${20 - len} more characters needed` : `${len} characters`;
+      charCount.style.color = len >= 20 ? 'var(--yellow)' : '';
+    });
+
+    /* Submit */
+    reviewForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const required = reviewForm.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(f => {
+        if (!f.value.trim() || (f.type === 'radio' && !reviewForm.querySelector(`[name="${f.name}"]:checked`))) {
+          valid = false;
+        }
+      });
+      if (textarea.value.trim().length < 20) { valid = false; }
+      if (!valid) {
+        reviewStatus.style.color = '#f87171';
+        reviewStatus.textContent = '✗ Please fill in all required fields and write at least 20 characters.';
+        return;
+      }
+      const btn = reviewForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+      try {
+        const res = await fetch(reviewForm.action, {
+          method: 'POST',
+          body: new FormData(reviewForm),
+          headers: { Accept: 'application/json' }
+        });
+        if (!res.ok) throw new Error();
+        reviewForm.style.display = 'none';
+        reviewSuccess.classList.add('show');
+      } catch {
+        reviewStatus.style.color = '#f87171';
+        reviewStatus.textContent = '✗ Something went wrong. Please email ryan.chidgey@ybr.com.au directly.';
+        btn.disabled = false;
+        btn.textContent = 'Submit Review';
+      }
+    });
+  </script>
+</body>
+</html>

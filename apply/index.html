@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Free Call | Ryan Chidgey · Yellow Brick Road</title>
+  <meta name="description" content="Book a free call with Ryan Chidgey, mortgage consultant at Yellow Brick Road. No cost, no obligation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <nav class="nav-inner container-wide">
+      <a href="/" class="brand">
+        <span class="brand-name">Ryan Chidgey</span>
+        <span class="brand-sub">Yellow Brick Road</span>
+      </a>
+      <div class="desktop-nav">
+        <a href="/#services"    class="nav-link">Services</a>
+        <a href="/#profile"     class="nav-link">Profile</a>
+        <a href="/#calculator"  class="nav-link">Calculator</a>
+        <a href="/#lenders"     class="nav-link">Lenders</a>
+        <a href="/#reviews"     class="nav-link">Reviews</a>
+      </div>
+      <div class="nav-end">
+        <a href="tel:0435911715" class="btn-cta">0435 911 715</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/#services">Services</a>
+      <a href="/#profile">Profile</a>
+      <a href="/#calculator">Calculator</a>
+      <a href="/#lenders">Lenders</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/" class="mobile-cta">Back to Site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-surface" style="padding-top:8rem;">
+      <div class="container-wide">
+
+        <div class="section-head center-head">
+          <a href="/" class="back-link">← Back to site</a>
+          <span class="label-chip">Get Started</span>
+          <h1 class="headline-lg">Book Your Free Call</h1>
+          <p class="body-lg text-muted">Tell Ryan what you're looking for — he'll be in touch within 24 hours. No cost, no obligation.</p>
+        </div>
+
+        <div class="form-shell">
+          <form id="clientInfoForm" action="https://formspree.io/f/xojyprbk" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Enquiry — ryanmortgage.com.au" />
+
+            <div class="form-section">
+              <h3 class="form-section-title">Your Details</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label class="label-mono" for="firstName">First Name <span class="req">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="Jane" />
+                </div>
+                <div class="field">
+                  <label class="label-mono" for="lastName">Last Name <span class="req">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Smith" />
+                </div>
+                <div class="field">
+                  <label class="label-mono" for="contactNumber">Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="contactNumber" name="contactNumber" required autocomplete="tel" placeholder="0400 000 000" />
+                </div>
+                <div class="field">
+                  <label class="label-mono" for="emailAddress">Email Address <span class="req">*</span></label>
+                  <input type="email" id="emailAddress" name="emailAddress" required autocomplete="email" placeholder="jane@example.com" />
+                </div>
+              </div>
+              <div class="form-grid" style="margin-top:1.25rem;">
+                <div class="field field-full">
+                  <label class="label-mono" for="enquiryType">What are you looking to do?</label>
+                  <select id="enquiryType" name="enquiryType">
+                    <option value="" disabled selected>Select…</option>
+                    <option value="buy">Buy a Home</option>
+                    <option value="invest">Invest</option>
+                    <option value="refinance">Refinance</option>
+                    <option value="notsure">Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-submit-area">
+              <p class="body-md text-muted form-submit-note">Ryan will review your details and be in touch within 24 hours to discuss your options.</p>
+              <button type="submit" class="btn-primary btn-submit">Get in Touch</button>
+              <p id="formStatus" class="form-status" role="status"></p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container-wide footer-bottom-inner">
+        <p class="label-mono text-muted">RYAN CHIDGEY IS A CREDIT REPRESENTATIVE OF YELLOW BRICK ROAD FINANCE. ACL 393195. ALL LOANS SUBJECT TO LENDER APPROVAL.</p>
+        <p class="label-mono text-muted">© 2026 RYAN CHIDGEY | DESIGNED BY SLY SYSTEMS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
