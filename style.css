@@ -949,6 +949,7 @@ input[type="range"]::-moz-range-thumb {
   border-radius: var(--r-2xl);
   padding: 2.5rem;
   max-width: 880px;
+  margin-inline: auto;
 }
 .form-section {
   margin-bottom: 2.5rem;
